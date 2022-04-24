@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style id="swiper-styles">
+
+		body {
+				font-family: Arial, Helvetica, sans-serif;
+		}
+		figure {
+			margin: 0;
+		}
+			
+		// korana web s rafe
+
+		.a {
+			background: #fff;
+		}
+		.b {
+			background: #fff;
+		}
+		.c {
+			height: 100%;
+		}
+		.a,
+		.b {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: aliceblue;
+			font-size: 4rem;
+		}
+
+		html,
+		body,
+		.swiper-wrapper {
+			padding: 0;
+			margin: 0;
+			max-width: 100vw;
+			height: 100%;
+		}
+
+
+		.swiper-slide {
+			position: relative;
+			box-sizing: border-box;
+			height: 100%;
+			padding-bottom: 3rem;
+			flex-shrink: 0;
+		}
+		
+		.swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top;
+			border: 2px solid #fff;
+		}
+
+		
+		.swiper-container-wrapper {
+			height: calc(70% + 5rem);
+			position: relative;
+			cursor: grab;
+		}
+		.swiper-container {
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			/* touch-action: none; */
+		}
+		.swiper-slide-active img {
+			border: 2px solid #FF5E5E;
+		}
+
+		.swiper-slide figcaption {
+			padding: .5rem;
+			opacity: 0;
+			transition: opacity .25s ease;
+		}
+
+		.swiper-slide-active figcaption {
+				opacity: 1;
+		}
+
+
+	/* Navigation, next prev and dotts */
+	.navigation {
+		box-sizing: border-box;
+		position: absolute;
+		bottom: -80px;
+		padding: 2rem;
+		right: 0;
+		z-index: 999999;
+		width: 100%;
+		height: 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.buttons {
+		display: flex;
+		width: fit-content;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.swiper-plugin-navigation-prevEl,
+	.swiper-plugin-navigation-nextEl {
+		display: block;
+		padding: 0;
+		border: none;
+		outline: none;
+		background: transparent;
+		cursor: pointer;
+	}
+
+	.swiper-plugin-navigation-prevEl {
+		margin-right: 4rem;
+		margin-top: 2px;
+	}
+	
+	.swiper-plugin-navigation-nextEl {
+		margin-top: 3px;
+	}
+
+	.swiper-plugin-navigation-prevEl svg path,
+	.swiper-plugin-navigation-nextEl svg path {
+		stroke: #000;
+	}
+
+	.swiper-plugin-navigation-prevEl:hover svg path,
+	.swiper-plugin-navigation-nextEl:hover svg path,
+	.swiper-plugin-navigation-prevEl:focus svg path,
+	.swiper-plugin-navigation-nextEl:focus svg path {
+		stroke: #FF5E5E;
+	}
+
+	/* plugin pagination */
+	.swiper-plugin-pagination {
+		display: flex;
+		justify-content: space-between;
+		min-width: 48px;
+		margin-right: 2rem;
+	}
+  .swiper-plugin-pagination__item {
+    display: block;
+    margin: 0 0.5rem;
+    width: 0.75rem;
+    padding-top: .75rem;
+    height: 0;
+    border-radius: 50%;
+    border: none;
+    background: #222;
+    transition: background ease 0.12s;
+    cursor: pointer;
+  }
+
+  .swiper-plugin-pagination__item.is-active {
+    background: #FF5E5E;
+  }
+	</style>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Swiper</title>
+</head>
+<body>
+	
+	<div class="swiper-container-wrapper">
+		<!-- Slider main container -->
+		<div class="swiper-container">
+		<!-- Additional required wrapper -->
+			<figure class="swiper-wrapper">
+					<!-- Slides -->
+					<figure class="swiper-slide">
+						<img
+							src="images/slide0.jpg"
+						/>
+						<div class="swiper-lazy-preloader"></div>
+						<figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit.</figcaption>
+					</figure>
+					<figure class="swiper-slide">
+						<img
+						class="swiper-lazy"
+            data-src="images/slide1.jpg"
+						/>
+						<div class="swiper-lazy-preloader"></div>
+						<figcaption>Lorem ipsum dolor sit amet consectetur </figcaption>
+					</figure>
+					<figure class="swiper-slide">
+						<img
+						class="swiper-lazy"
+            data-src="images/slide2.jpg"
+							/>
+							<div class="swiper-lazy-preloader"></div>
+							<figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum!</figcaption>
+					</figure>
+					<figure class="swiper-slide">
+						<img
+						class="swiper-lazy"
+            data-src="images/slide3.jpg"
+							/>
+							<div class="swiper-lazy-preloader"></div>
+							<figcaption>Lorem ipsum dolor sit amet</figcaption>
+					</figure>
+					<figure class="swiper-slide">
+						<img
+						class="swiper-lazy"
+            data-src="images/slide4.jpg"
+							/>
+							<div class="swiper-lazy-preloader"></div>
+							<figcaption>Lorem ipsum dolor</figcaption>
+					</figure>
+					<figure class="swiper-slide">
+						<img
+						class="swiper-lazy"
+            data-src="images/slide5.jpg"
+							/>
+							<div class="swiper-lazy-preloader"></div>
+							<figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ea eum!</figcaption>
+					</figure>
+					<figure class="swiper-slide">
+						<img
+						class="swiper-lazy"
+            data-src="images/slide6.jpg"
+							/>
+							<div class="swiper-lazy-preloader"></div>
+							<figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ea eum!</figcaption>
+					</figure>
+					<figure class="swiper-slide">
+						<img
+						class="swiper-lazy"
+            data-src="images/slide7.jpg"
+							/>
+							<div class="swiper-lazy-preloader"></div>
+							<figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ea eum!</figcaption>
+					</figure>
+				</figure>
+				
+			</div>
+			
+			<!-- If we need pagination -->
+			<div class="navigation">
+				<div class="swiper-plugin-pagination"></div>
+				<div class="buttons">
+					<button class="swiper-plugin-navigation-prevEl"><svg fill="none" height="59px" width="90px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 59"><path d="M2 30h88M2 30l29 28M2 30 31 1"  stroke-width="2"/></svg></button>
+					<button class="swiper-plugin-navigation-nextEl"><svg height="59px" width="90px" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 59"><path d="M88 29H0m88 0L59 1m29 28L59 58"  stroke-width="2"/></svg></button>
+				</div>
+			</div>
+
+	</div>
+
+<script src="tiny-swiper/lib/index.min.js"></script>
+<script src="tiny-swiper/lib/modules/keyboardControl.min.js"></script>
+<script src="tiny-swiper/lib/modules/navigation.min.js"></script>
+<script src="tiny-swiper/lib/modules/pagination.min.js"></script>
+<script src="tiny-swiper/lib/modules/lazyload.min.js"></script>
+
+<script id="apuri-swiper-conf">
+	 var mySwiper = new Swiper('.swiper-container', {
+		loop: true,
+		speed: 500,
+		autoWidth: true,
+		// freeMode: true,
+		spaceBetween: 20,
+		slidesPerView: 2.25,
+		centeredSlides: false,
+		// direction: 'horizontal',
+		initialSlide: 0,
+		autoplay: true,
+		keyboard: {
+		enabled: true
+		},
+		navigation: {
+			prevEl: ".swiper-plugin-navigation-prevEl",
+			nextEl: ".swiper-plugin-navigation-nextEl"
+		},
+		pagination: {
+			el: ".swiper-plugin-pagination",
+			clickable: true,
+			bulletClass: "swiper-plugin-pagination__item",
+			bulletActiveClass: "is-active"
+		},
+		lazyload: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+			loadOnTransitionStart: false,
+			elementClass: "swiper-lazy",
+			loadingClass: "swiper-lazy-loading",
+			loadedClass: "swiper-lazy-loaded",
+			preloaderClass: "swiper-lazy-preloader",
+		},
+		plugins: [
+			SwiperPluginKeyboardControl,
+			SwiperPluginNavigation,
+			SwiperPluginPagination,
+			SwiperPluginLazyload,
+		],
+	});
+</script>
+	
+</body>
+</html>
